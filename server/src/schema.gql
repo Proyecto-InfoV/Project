@@ -1,0 +1,43 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateUsuarioInput {
+  apMaterno: String
+  apPaterno: String!
+  fech_nacimiento: String!
+  nombre: String!
+  numTelefono: String!
+  tipoUsr_id: Int!
+}
+
+type Mutation {
+  actualizarUsuario(updateUsuarioInput: UpdateUsuarioInput!): Usuario!
+  borrarUsuario(id: Float!): String!
+  crearUsuario(usuarioInput: CreateUsuarioInput!): Usuario!
+}
+
+type Query {
+  usuario(id: Float!): Usuario!
+  usuarios: [Usuario!]!
+}
+
+input UpdateUsuarioInput {
+  apMaterno: String
+  apPaterno: String
+  fech_nacimiento: String
+  id: Int!
+  nombre: String
+  numTelefono: String
+  tipoUsr_id: Int
+}
+
+type Usuario {
+  apMaterno: String
+  apPaterno: String!
+  fech_nacimiento: String!
+  id: Float!
+  nombre: String!
+  numTelefono: String!
+  tipoUsr_id: Float!
+}
